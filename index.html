@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>For My Bebe 🤍</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For Vira 🤍</title>
 
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
@@ -13,78 +13,100 @@
   <!-- FLOATING HEARTS -->
   <div class="hearts-container"></div>
 
-  <!-- AUDIO -->
+  <!-- MUSIC -->
   <audio id="bg-music" loop>
     <source src="lany-you.mp3" type="audio/mpeg">
   </audio>
 
   <!-- START SCREEN -->
   <div id="start-screen">
-    <div class="start-content">
+    <div class="start-box">
       <h1>for my bebe 🤍</h1>
-      <p>tap anywhere to start our story</p>
+      <p>tap anywhere to begin our story</p>
     </div>
   </div>
 
   <!-- MAIN CONTENT -->
-  <div class="container hidden" id="main-content">
-    <h2>Happy 9th Month Anniversary</h2>
-    <span class="date">April 15th, 2025</span>
+  <main id="main" class="hidden">
 
-    <div class="counter">
-      <span id="days-count">0</span>
-      <small>days since we started</small>
-    </div>
+    <!-- HERO -->
+    <section class="hero">
+      <h2>Happy 9 Months Anniversary</h2>
+      <span class="date">since April 15th, 2025</span>
 
-    <div class="card">
-      <p class="name">
+      <div class="counter">
+        <span id="days">0</span>
+        <small>days together</small>
+      </div>
+    </section>
+
+    <!-- MESSAGE -->
+    <section class="message">
+      <p class="opening">
         Dear <strong>Vira April Listiana</strong>,<br>
-        my bebe 🤍
+        my beloved <strong>bebe</strong> 🤍
       </p>
 
       <p>
-        Nine months ago, we began something quietly special.
-        No shared spaces, no physical distance to cross —
-        just two people choosing each other,
-        one message and one call at a time.
+        Nine months ago, we chose each other
+        in a way that didn’t require distance to disappear.
+        We didn’t need the same place,
+        just the same intention.
       </p>
 
       <p>
-        Even across screens and time zones,
-        you have always felt real.
-        In the way you care.
-        In the way you stay.
-        In the way you make distance feel gentle.
+        Our relationship began virtually,
+        but what we built was always real.
+        In every late reply, every call,
+        every moment where staying felt like a choice —
+        you stayed.
       </p>
 
       <p>
-        Some days, our world fits inside a screen.
-        Some nights, your voice is all I need.
-        And somehow, you never feel far —
-        you feel steady,
-        familiar,
-        like home.
-      </p>
-
-      <p>
-        Thank you for staying, bebe.
-        For being patient.
-        For choosing us even when it’s not easy.
-        For turning something virtual
-        into something deeply meaningful.
+        You turned something simple
+        into something meaningful.
+        You turned waiting into patience.
+        And somehow, you made my world
+        feel warmer from a screen away.
       </p>
 
       <p class="highlight">
-        Here’s to us,
-        and to everything we’re still becoming 🤍
+        Thank you for being you, bebe.
+        This is only the beginning of us 🤍
       </p>
 
-      <p class="fun">
-        and yes… if our love can survive bad signals,
-        late replies, and “can you hear me now?” moments,
-        I think we’re doing pretty great 😄
+      <p class="funny">
+        also thank you for tolerating my random moods,
+        my questionable jokes,
+        and my “just one more game” moments 😌
+        you deserve a medal… or at least unlimited love.
       </p>
-    </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery">
+      <h3>our moments</h3>
+
+      <div class="gallery-grid">
+        <img src="images/foto1.jpg" class="wide" alt="roblox moment">
+        <img src="images/foto2.jpg" alt="vira">
+        <img src="images/foto3.jpg" alt="vira">
+        <img src="images/foto4.jpg" alt="vira">
+        <img src="images/foto5.jpg" alt="vira">
+        <img src="images/foto6.jpg" class="wide" alt="roblox moment">
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      made with love for bebe 🤍
+    </footer>
+
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal">
+    <img id="modal-img">
   </div>
 
   <script src="script.js"></script>
