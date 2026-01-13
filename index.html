@@ -5,151 +5,112 @@
   <title>For My Bebe 🤍</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- FLOATING HEARTS -->
-  <div class="hearts-container"></div>
+<!-- MUSIC -->
+<audio autoplay loop>
+  <source src="lany-you.mp3" type="audio/mpeg">
+</audio>
 
-  <!-- MUSIC -->
-  <audio id="bg-music" loop>
-    <source src="lany-you.mp3" type="audio/mpeg">
-  </audio>
-
-  <!-- START SCREEN -->
-  <div id="start-screen">
-    <div class="start-box">
-      <h1>for my bebe 🤍</h1>
-      <p>tap anywhere to begin our story</p>
-    </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>For My Bebe 🤍</h1>
+    <p>
+      Vira April Listiana<br>
+      my favorite person, my comfort, my home
+    </p>
+    <div class="counter" id="counter"></div>
   </div>
+</section>
 
-  <!-- MAIN CONTENT -->
-  <main id="main" class="hidden">
+<!-- MESSAGE -->
+<section class="section">
+  <h2 class="section-title">A Message From My Heart</h2>
 
-    <!-- HERO -->
-    <section class="hero">
-      <h2>Happy 9 Months Anniversary</h2>
-      <span class="date">since April 15th, 2025</span>
-
-      <div class="counter">
-        <span id="days">0</span>
-        <small>days together</small>
-      </div>
-    </section>
-
-    <!-- MESSAGE -->
-    <section class="message">
-      <p class="opening">
-        Dear <strong>Vira April Listiana</strong>,<br>
-        my beloved <strong>bebe</strong> 🤍
-      </p>
-
-      <p>
-        Nine months ago, we started something that didn’t follow the usual rules.
-        No shared city, no holding hands, no walking side by side —
-        just two people choosing to stay, choosing to talk, choosing to care.
-        And somehow, that choice was enough to make everything feel real.
-      </p>
-
-      <p>
-        What we have began virtually,
-        but nothing about my feelings for you has ever felt distant or artificial.
-        From the very beginning, you felt familiar —
-        like someone my heart already recognized before my mind could explain why.
-      </p>
-
-      <p>
-        Through screens, messages, and late-night conversations,
-        you became a part of my daily rhythm.
-        The person I look forward to hearing from.
-        The one who makes ordinary moments feel lighter, warmer, and more meaningful.
-      </p>
-
-      <p>
-        I love how our time together doesn’t need grand gestures.
-        Sometimes it’s just us playing, laughing at small things,
-        or simply existing in the same moment — even if miles apart.
-        Those moments may look simple from the outside,
-        but to me, they mean everything.
-      </p>
-
-      <p>
-        You have this quiet way of making me feel understood.
-        Of making me feel seen.
-        Even when words are few, your presence is always enough.
-        You turned waiting into patience,
-        distance into trust,
-        and time into something worth holding onto.
-      </p>
-
-      <p>
-        Thank you for staying, bebe.
-        For choosing me again and again, even when it’s not always easy.
-        For being soft when I need comfort,
-        and playful when I need joy.
-        For being my favorite notification,
-        my favorite voice,
-        and my favorite person.
-      </p>
-
-      <p>
-        What I love isn’t just the moments we share,
-        but the person you are in every one of them.
-        The smile behind the screen.
-        The energy you bring into my world.
-        The way you make “virtual” feel deeply personal and real.
-      </p>
-
-      <p class="highlight">
-        Nine months with you has taught me that love doesn’t depend on distance —
-        it depends on intention.
-        And with you, that intention has always been clear 🤍
-      </p>
-
-      <p class="funny">
-        and yes… I also love how you somehow tolerate my randomness,
-        my sudden jokes, and my competitive side when we play 😌
-        clearly, you deserve a lifetime supply of love for that.
-      </p>
-    </section>
-
-    <!-- WHAT I LOVE -->
-    <section class="gallery">
-      <h3>what i love</h3>
-
-      <p class="gallery-desc">
-        these are simple things,
-        but they mean everything to me —
-        moments we play together,
-        and the person who makes those moments special.
-      </p>
-
-      <div class="gallery-grid">
-        <img src="images/foto1.jpg" class="wide" alt="roblox moment">
-        <img src="images/foto2.jpg" alt="vira">
-        <img src="images/foto3.jpg" alt="vira">
-        <img src="images/foto4.jpg" alt="vira">
-        <img src="images/foto5.jpg" alt="vira">
-        <img src="images/foto6.jpg" class="wide" alt="roblox moment">
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      made with love, patience, and you — bebe 🤍
-    </footer>
-
-  </main>
-
-  <!-- MODAL -->
-  <div id="modal">
-    <img id="modal-img">
+  <div class="message">
+    Dear Vira April Listiana, my beloved <strong>bebe</strong> 🤍  
+    <br><br>
+    Nine months ago, we started something that didn’t follow the usual rules.  
+    No shared city, no holding hands, no walking side by side —  
+    just two people choosing to stay, choosing to talk, choosing to care.  
+    And somehow, that choice was enough to make everything feel real.
+    <br><br>
+    What we have began virtually,  
+    but nothing about my feelings for you has ever felt distant or artificial.  
+    From the very beginning, you felt familiar —  
+    like someone my heart already recognized before my mind could explain why.
+    <br><br>
+    Through screens, messages, and late-night conversations,  
+    you slowly became part of my daily rhythm.  
+    The person I look forward to hearing from.  
+    The one who makes ordinary moments feel lighter, warmer, and more meaningful.
+    <br><br>
+    I love how our time together doesn’t need grand gestures.  
+    Sometimes it’s just us playing, laughing at small things,  
+    or simply existing in the same moment — even if miles apart.  
+    Those moments may look simple from the outside,  
+    but to me, they mean everything.
+    <br><br>
+    You have this quiet way of making me feel understood.  
+    Of making me feel seen.  
+    Even when words are few, your presence is always enough.  
+    You turned waiting into patience,  
+    distance into trust,  
+    and time into something worth holding onto.
+    <br><br>
+    Thank you for staying, bebe.  
+    For choosing me again and again, even when it’s not always easy.  
+    For being soft when I need comfort,  
+    and playful when I need joy.  
+    For being my favorite notification,  
+    my favorite voice,  
+    and my favorite person.
+    <br><br>
+    What I love isn’t just the moments we share,  
+    but the person you are in every one of them.  
+    The smile behind the screen.  
+    The energy you bring into my world.  
+    The way you make “virtual” feel deeply personal and real.
+    <br><br>
+    Nine months with you has taught me that love doesn’t depend on distance —  
+    it depends on intention.  
+    And with you, that intention has always been clear.
+    <br><br>
+    Here’s to us, bebe.  
+    To the memories we’ve made,  
+    the moments we cherish,  
+    and everything we’re still becoming —  
+    slowly, sincerely, and together 🤍  
+    <br><br>
+    <em>
+      and yes… I also love how you somehow tolerate my randomness,  
+      my sudden jokes, and my competitive side when we play 😌  
+      clearly, you deserve a lifetime supply of love for that.
+    </em>
   </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- GALLERY -->
+<section class="section">
+  <h2 class="section-title">What I Love</h2>
+
+  <div class="gallery">
+    <img src="images/foto1.jpg" class="roblox" alt="Roblox Moment">
+    <img src="images/foto2.jpg" class="soft" alt="Bebe">
+    <img src="images/foto3.jpg" class="soft" alt="Bebe">
+    <img src="images/foto4.jpg" class="soft" alt="Bebe">
+    <img src="images/foto5.jpg" class="polaroid" alt="Childhood Memory">
+    <img src="images/foto6.jpeg" class="roblox" alt="Roblox Together">
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
-
