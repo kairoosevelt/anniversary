@@ -6,184 +6,124 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(to bottom, #ffe4ec, #ffffff);
-  color: #333;
+  background: linear-gradient(180deg, #0e0e11, #1a1a1f);
+  color: #f1f1f1;
+  overflow-x: hidden;
 }
-
-/* START SCREEN */
-#start-screen {
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(to bottom, #ffb6c1, #fff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
-.start-box {
-  text-align: center;
-}
-
-.start-box h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-}
-
-.start-box p {
-  margin-top: 10px;
-  opacity: 0.7;
-}
-
-/* MAIN */
-.hidden { display: none; }
 
 /* HERO */
 .hero {
   min-height: 100vh;
-  text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.hero h2 {
+.hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 44px;
+  font-size: 3.2rem;
+  margin-bottom: 20px;
 }
 
-.date {
-  margin: 10px 0;
-  color: #777;
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.85;
 }
 
-.counter span {
-  font-size: 52px;
-  color: #ff6f91;
+.counter {
+  margin-top: 25px;
+  font-size: 1.2rem;
+}
+
+/* SECTION */
+.section {
+  padding: 110px 8%;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  margin-bottom: 45px;
+  text-align: center;
 }
 
 /* MESSAGE */
 .message {
-  max-width: 900px;
+  max-width: 920px;
   margin: auto;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.message p {
-  line-height: 1.9;
-  margin-bottom: 22px;
-}
-
-.opening,
-.highlight {
-  font-family: 'Playfair Display', serif;
-}
-
-.funny {
-  font-style: italic;
-  opacity: 0.8;
+  font-size: 1.05rem;
+  line-height: 2;
+  opacity: 0.95;
 }
 
 /* GALLERY */
 .gallery {
-  padding: 80px 60px;
-}
-
-.gallery h3 {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.gallery-desc {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 40px;
-  opacity: 0.8;
-}
-
-.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 230px;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
 }
 
-.gallery-grid img {
+.gallery img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
   border-radius: 18px;
-  cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
+.gallery img:hover {
+  transform: scale(1.04);
 }
 
-.gallery-grid img.wide {
-  grid-column: span 2;
+/* PHOTO STYLES */
+.roblox {
+  border: 2px solid rgba(255,255,255,0.15);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.6);
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 13px;
-  color: #777;
+.soft {
+  border: 1.5px solid rgba(255,190,210,0.5);
+  box-shadow: 0 25px 55px rgba(255,140,180,0.18);
 }
 
-/* MODAL */
-#modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 20;
+.polaroid {
+  background: #fff;
+  padding: 14px 14px 34px;
+  border-radius: 6px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.4);
 }
 
-#modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 16px;
-}
-
-/* HEARTS */
-.hearts-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-}
-
+/* FLOATING HEART */
 .heart {
-  position: absolute;
+  position: fixed;
   bottom: -20px;
-  animation: floatUp linear forwards;
-  color: rgba(255, 105, 135, 0.5);
+  color: pink;
+  font-size: 18px;
+  animation: floatUp linear infinite;
+  opacity: 0.6;
 }
 
 @keyframes floatUp {
   to {
-    transform: translateY(-110vh) scale(1.5);
+    transform: translateY(-120vh);
     opacity: 0;
   }
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero h2 { font-size: 28px; }
-  .gallery { padding: 40px 20px; }
-  .gallery-grid {
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .gallery {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 180px;
   }
-  .gallery-grid img.wide {
-    grid-column: span 2;
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
   }
 }
