@@ -1,115 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>For My Bebe 🤍</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>For My Bebe 🤍</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- MUSIC -->
-<audio autoplay loop>
+<!-- PASSWORD PAGE -->
+<div id="password-screen" class="overlay">
+  <div class="box">
+    <h2>Private Page 🤍</h2>
+    <input type="password" id="passwordInput" placeholder="Enter password">
+    <button onclick="checkPassword()">Enter</button>
+  </div>
+</div>
+
+<!-- TAP TO ENTER -->
+<div id="enter-screen" class="overlay hidden">
+  <div class="box">
+    <h1>For My Bebe 🤍</h1>
+    <p>Tap to enter</p>
+    <button onclick="enterSite()">Enter</button>
+  </div>
+</div>
+
+<!-- AUDIO -->
+<audio id="bg-music" loop>
   <source src="lany-you.mp3" type="audio/mpeg">
 </audio>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>For My Bebe 🤍</h1>
-    <p>
-      Vira April Listiana<br>
-      my favorite person, my comfort, my home
-    </p>
-    <div class="counter" id="counter"></div>
-  </div>
+<section class="hero hidden-content">
+  <h1>For My Bebe 🤍</h1>
+  <p>Vira April Listiana<br>my favorite person, my comfort, my home</p>
+  <div id="counter"></div>
 </section>
 
 <!-- MESSAGE -->
-<section class="section">
-  <h2 class="section-title">A Message From My Heart</h2>
+<section class="section hidden-content">
+<h2 class="section-title">A Message From My Heart</h2>
+<div class="message">
+Dear Vira April Listiana, my beloved <b>bebe</b> 🤍<br><br>
 
-  <div class="message">
-    Dear Vira April Listiana, my beloved <strong>bebe</strong> 🤍  
-    <br><br>
-    Nine months ago, we started something that didn’t follow the usual rules.  
-    No shared city, no holding hands, no walking side by side —  
-    just two people choosing to stay, choosing to talk, choosing to care.  
-    And somehow, that choice was enough to make everything feel real.
-    <br><br>
-    What we have began virtually,  
-    but nothing about my feelings for you has ever felt distant or artificial.  
-    From the very beginning, you felt familiar —  
-    like someone my heart already recognized before my mind could explain why.
-    <br><br>
-    Through screens, messages, and late-night conversations,  
-    you slowly became part of my daily rhythm.  
-    The person I look forward to hearing from.  
-    The one who makes ordinary moments feel lighter, warmer, and more meaningful.
-    <br><br>
-    I love how our time together doesn’t need grand gestures.  
-    Sometimes it’s just us playing, laughing at small things,  
-    or simply existing in the same moment — even if miles apart.  
-    Those moments may look simple from the outside,  
-    but to me, they mean everything.
-    <br><br>
-    You have this quiet way of making me feel understood.  
-    Of making me feel seen.  
-    Even when words are few, your presence is always enough.  
-    You turned waiting into patience,  
-    distance into trust,  
-    and time into something worth holding onto.
-    <br><br>
-    Thank you for staying, bebe.  
-    For choosing me again and again, even when it’s not always easy.  
-    For being soft when I need comfort,  
-    and playful when I need joy.  
-    For being my favorite notification,  
-    my favorite voice,  
-    and my favorite person.
-    <br><br>
-    What I love isn’t just the moments we share,  
-    but the person you are in every one of them.  
-    The smile behind the screen.  
-    The energy you bring into my world.  
-    The way you make “virtual” feel deeply personal and real.
-    <br><br>
-    Nine months with you has taught me that love doesn’t depend on distance —  
-    it depends on intention.  
-    And with you, that intention has always been clear.
-    <br><br>
-    Here’s to us, bebe.  
-    To the memories we’ve made,  
-    the moments we cherish,  
-    and everything we’re still becoming —  
-    slowly, sincerely, and together 🤍  
-    <br><br>
-    <em>
-      and yes… I also love how you somehow tolerate my randomness,  
-      my sudden jokes, and my competitive side when we play 😌  
-      clearly, you deserve a lifetime supply of love for that.
-    </em>
-  </div>
+Nine months ago, we started something that didn’t follow the usual rules.
+No shared city, no holding hands, no walking side by side —
+just two people choosing to stay, choosing to care.
+And somehow, that choice was enough to make everything feel real.<br><br>
+
+What we have began virtually,
+but nothing about my feelings for you has ever felt distant.
+From the very beginning, you felt familiar —
+like someone my heart already recognized before my mind could explain why.<br><br>
+
+I love our moments together.
+Playing, laughing, teasing each other,
+and sharing silence that somehow still feels warm.
+Those moments may look simple,
+but to me, they mean everything.<br><br>
+
+Thank you for staying, bebe.
+For choosing me even when distance exists.
+For being my favorite notification,
+my favorite voice,
+and my favorite person 🤍<br><br>
+
+And yes… I also love how you tolerate my randomness,
+my sudden jokes,
+and my competitive side when we play 😌
+</div>
 </section>
 
 <!-- GALLERY -->
-<section class="section">
-  <h2 class="section-title">What I Love</h2>
-
-  <div class="gallery">
-    <img src="images/foto1.jpg" class="roblox" alt="Roblox Moment">
-    <img src="images/foto2.jpg" class="soft" alt="Bebe">
-    <img src="images/foto3.jpg" class="soft" alt="Bebe">
-    <img src="images/foto4.jpg" class="soft" alt="Bebe">
-    <img src="images/foto5.jpg" class="polaroid" alt="Childhood Memory">
-    <img src="images/foto6.jpeg" class="roblox" alt="Roblox Together">
-  </div>
+<section class="section hidden-content">
+<h2 class="section-title">What I Love</h2>
+<div class="gallery">
+  <img src="images/foto1.jpg" class="roblox" onclick="openModal(this)">
+  <img src="images/foto2.jpg" class="soft" onclick="openModal(this)">
+  <img src="images/foto3.jpg" class="soft" onclick="openModal(this)">
+  <img src="images/foto4.jpg" class="soft" onclick="openModal(this)">
+  <img src="images/foto5.jpg" class="polaroid" onclick="openModal(this)">
+  <img src="images/foto6.jpg" class="roblox" onclick="openModal(this)">
+</div>
 </section>
+
+<!-- IMAGE MODAL -->
+<div id="image-modal" onclick="closeModal()">
+  <img id="modal-img">
+</div>
 
 <script src="script.js"></script>
 </body>
