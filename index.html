@@ -3,44 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Anniversary 🤍</title>
+  <title>For Vira 🤍</title>
+
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- FLOATING HEARTS -->
+  <div class="hearts-container"></div>
+
+  <!-- AUDIO -->
   <audio id="bg-music" loop>
-    <source src="music/lany-you.mp3" type="audio/mpeg">
+    <source src="lany-you.mp3" type="audio/mpeg">
   </audio>
 
-  <div class="container">
-    <h1>Happy 9th Month Anniversary 🤍</h1>
-    <p class="date">April 15th, 2025</p>
+  <!-- START SCREEN -->
+  <div id="start-screen">
+    <div class="start-content">
+      <h1>for my bebe 🤍</h1>
+      <p>tap anywhere to start our story</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container hidden" id="main-content">
+    <h2>Happy 9th Month Anniversary</h2>
+    <span class="date">April 15th, 2025</span>
+
+    <div class="counter">
+      <span id="days-count">0</span>
+      <small>days since we started</small>
+    </div>
 
     <div class="card">
-      <p>
-        Nine months ago, we began something quietly special.
-        No shared spaces, no physical distance to cross —
-        just two people choosing each other, one message at a time.
+      <p class="name">
+        Dear <strong>Vira April Listiana</strong>,<br>
+        my bebe 🤍
       </p>
 
       <p>
-        What we have may exist across screens and time zones,
-        but it has always felt real.
-        Real in the way you listen.
-        Real in the way you stay.
+        Nine months ago, we began something quietly special.
+        No shared spaces, no physical distance to cross —
+        just two people choosing each other,
+        one message and one call at a time.
+      </p>
+
+      <p>
+        Even across screens and time zones,
+        you have always felt real.
+        In the way you care.
+        In the way you stay.
+        In the way you make distance feel gentle.
       </p>
 
       <p>
         Some days, our world fits inside a screen.
         Some nights, your voice is all I need.
         And somehow, you never feel far —
-        you feel like home.
+        you feel steady,
+        familiar,
+        like home.
       </p>
 
       <p>
-        Thank you for staying.
+        Thank you for staying, bebe.
         For being patient.
+        For choosing us even when it’s not easy.
         For turning something virtual
         into something deeply meaningful.
       </p>
@@ -56,8 +85,6 @@
         I think we’re doing pretty great 😄
       </p>
     </div>
-
-    <button id="music-btn">▶ play music</button>
   </div>
 
   <script src="script.js"></script>
