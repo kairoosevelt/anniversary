@@ -8,38 +8,6 @@ body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(to bottom, #ffe4ec, #ffffff);
   color: #333;
-  overflow-x: hidden;
-}
-
-/* FLOATING HEARTS */
-.hearts-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.heart {
-  position: absolute;
-  bottom: -20px;
-  font-size: 18px;
-  color: rgba(255, 105, 135, 0.6);
-  animation: floatUp linear forwards;
-}
-
-@keyframes floatUp {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-110vh) scale(1.6);
-    opacity: 0;
-  }
 }
 
 /* START SCREEN */
@@ -50,103 +18,174 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   z-index: 10;
 }
 
-.start-content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.start-content p {
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-/* MAIN CONTENT */
-.container {
-  max-width: 420px;
-  margin: auto;
-  padding: 24px;
+.start-box {
   text-align: center;
-  animation: fadeIn 1.5s ease forwards;
-  position: relative;
-  z-index: 2;
 }
 
+.start-box h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+}
+
+.start-box p {
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+/* MAIN */
 .hidden {
   display: none;
 }
 
-h2 {
+/* HERO */
+.hero {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 24px;
+  font-size: 44px;
 }
 
 .date {
-  display: block;
-  font-size: 13px;
+  margin: 10px 0;
   color: #777;
-  margin-bottom: 12px;
-}
-
-/* COUNTER */
-.counter {
-  margin-bottom: 20px;
 }
 
 .counter span {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 52px;
   color: #ff6f91;
 }
 
-.counter small {
-  display: block;
-  font-size: 12px;
+/* MESSAGE */
+.message {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.message p {
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.opening,
+.highlight {
+  font-family: 'Playfair Display', serif;
+}
+
+.funny {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 80px 60px;
+}
+
+.gallery h3 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 230px;
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-grid img.wide {
+  grid-column: span 2;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 13px;
   color: #777;
 }
 
-/* CARD */
-.card {
-  background: white;
-  padding: 22px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+/* MODAL */
+#modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
 }
 
-.card p {
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 16px;
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 16px;
 }
 
-.name {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
+/* HEARTS */
+.hearts-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.highlight {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
+.heart {
+  position: absolute;
+  bottom: -20px;
+  animation: floatUp linear forwards;
+  color: rgba(255, 105, 135, 0.5);
 }
 
-.fun {
-  font-size: 14px;
-  color: #666;
-  font-style: italic;
-}
-
-/* ANIMATION */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+@keyframes floatUp {
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .gallery {
+    padding: 40px 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
+
+  .gallery-grid img.wide {
+    grid-column: span 2;
   }
 }
