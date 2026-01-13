@@ -14,10 +14,11 @@ startScreen.addEventListener("click", () => {
 /* DAY COUNTER */
 const startDate = new Date("2025-04-15");
 const today = new Date();
-const diff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
-daysEl.textContent = diff;
+daysEl.textContent = Math.floor(
+  (today - startDate) / (1000 * 60 * 60 * 24)
+);
 
-/* FLOATING HEARTS */
+/* HEARTS */
 function createHeart() {
   const heart = document.createElement("div");
   heart.className = "heart";
